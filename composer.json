@@ -1,0 +1,42 @@
+{
+  "name": "gotrecillo/pagemanager",
+  "type": "package",
+  "description": "Create admin panel for pages, using page templates and Backpack\\CRUD.",
+  "keywords": [
+    "cms",
+    "content management system",
+    "presentation pages",
+    "presentation website",
+    "manage pages",
+    "admin panel"
+  ],
+  "require": {
+    "illuminate/support": "~5.1",
+    "php": "~5.5|~7.0",
+    "cviebrock/eloquent-sluggable": "^4.0",
+    "backpack/crud": "^3.0.6"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "4.*",
+    "squizlabs/php_codesniffer": "^2.8"
+  },
+  "autoload": {
+    "psr-4": {
+      "Gotrecillo\\PageManager\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Gotrecillo\\PageManager\\": "tests"
+    }
+  },
+  "scripts": {
+    "test": "phpunit",
+    "lint": [
+      "./vendor/bin/phpcs --standard=PSR2 src/ config/"
+    ],
+    "lint-fix": [
+      "./vendor/bin/phpcbf --standard=PSR2 src/ config/"
+    ]
+  }
+}
